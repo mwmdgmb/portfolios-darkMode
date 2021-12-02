@@ -10,6 +10,7 @@ export const cancelAllRequest = () => {
 };
 
 export const axiosInstance = axios.create({
+	// baseURL is set from .env file
 	headers: {},
 });
 

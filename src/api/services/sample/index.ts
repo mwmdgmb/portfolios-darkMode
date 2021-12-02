@@ -2,7 +2,7 @@ import { axiosInstance } from 'api';
 import { AxiosRequestConfig } from 'axios';
 
 enum EUserPaths {
-	baseURL = '/',
+	baseURL = 'https://jsonplaceholder.typicode.com/users',
 }
 
 const api = {

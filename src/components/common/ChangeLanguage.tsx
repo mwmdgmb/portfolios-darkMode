@@ -27,7 +27,7 @@ const LanguageBtn = () => {
 			label="Select"
 			value={lang}
 			onChange={handleChange}
-			helperText="Please select your currency"
+			helperText="Please select your language"
 		>
 			{languagesList.map(option => (
 				<MenuItem key={option} value={option}>

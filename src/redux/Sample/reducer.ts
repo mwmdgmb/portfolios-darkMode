@@ -4,13 +4,13 @@ import ActionType from './actions';
 import ReduxState from 'ReduxState';
 
 interface IStateReducer {
-	data: Record<string, any>[];
+	data: any;
 	theme: string;
 }
 
 const initialState: IStateReducer = {
 	data: [],
-	theme: 'light',
+	theme: 'dark',
 };
 
 const reducer: Reducer<IStateReducer, ActionType> = (state = initialState, action) => {
@@ -21,18 +21,19 @@ const reducer: Reducer<IStateReducer, ActionType> = (state = initialState, actio
 				data: action.payload,
 			};
 
-		// case ActionTypeEnum.changeThemeSuccess:
-		// return {
-		//   ...state,
-		//   theme: payload
-		// }
+		case ActionTypeEnum.changeThemeSuccess:
+			localStorage.setItem('theme', `${action.payload}`);
+			return {
+				...state,
+				theme: action.payload,
+			};
 
 		default:
 			return state;
 	}
 };
 
-const getList = (state: ReduxState) => state.sample.data;
-const getTheme = (state: ReduxState) => state.sample.theme;
+const getUsersList = (state: ReduxState) => state.sample.data;
+const getThemeSelector = (state: ReduxState) => state.sample.theme;
 
-export { reducer as sample, getTheme, getList };
+export { reducer as sample, getThemeSelector, getUsersList };

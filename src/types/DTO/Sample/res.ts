@@ -1,7 +1,12 @@
-import { IMainResponseDto } from "types/interface/IMainResponseDTO";
+import { IMainResponseDto } from 'types/interface/IMainResponseDTO';
 
 interface ISampleResDTO extends IMainResponseDto {
-	data: Record<string, any>[];
+	config: any;
+	data: any;
+	headers: any;
+	request: any;
+	status: number;
+	statusText: string;
 }
 
-export type {ISampleResDTO}
+export type { ISampleResDTO };

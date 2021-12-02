@@ -11,8 +11,8 @@ function* sampleRequest({ payload, meta }: ReturnType<typeof sampleActionRequest
 			loading: true,
 		});
 
-		console.log('response', response);
-		// yield put(sampleActionSuccess())
+
+		yield put(sampleActionSuccess(response.data));
 	} catch (error) {
 		// handle errors
 	}

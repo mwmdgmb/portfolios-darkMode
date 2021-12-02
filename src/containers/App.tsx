@@ -1,5 +1,6 @@
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Routing from '../app/index';
+import withRoot from './withRoot';
 
 const App = () => {
 	return (
@@ -10,4 +11,4 @@ const App = () => {
 	);
 };
 
-export default App;
+export default withRoot(App);
