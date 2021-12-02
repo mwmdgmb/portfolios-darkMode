@@ -76,14 +76,14 @@ const HomePage = () => {
 
 	const dispatch = useDispatch();
 	const getTheme = useSelector(getThemeSelector);
-	const usersList = useSelector(getUsersList);
+	// const usersList = useSelector(getUsersList);
 
 	// const getUsersFN = React.useCallback(() => dispatch(sampleActionRequest({})), []);
 
-	React.useEffect(() => {
-		// getUsersFN();
-		dispatch(sampleActionRequest({}));
-	}, []);
+	// React.useEffect(() => {
+	// 	// getUsersFN();
+	// 	dispatch(sampleActionRequest({}));
+	// }, []);
 
 	const texts = {
 		paragraph: t('sample.paragraph'),
@@ -93,8 +93,6 @@ const HomePage = () => {
 		let value = evt.target.value as string;
 		dispatch(changeTheme(value));
 	};
-
-	console.log('usersList', usersList);
 
 	return (
 		<ApolloProvider client={client}>
