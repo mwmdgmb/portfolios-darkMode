@@ -13,7 +13,7 @@ export const sampleActionRequest: ActionType<ActionTypeEnum.sampleRequest, ISamp
 		payload,
 	});
 
-export const sampleActionSuccess: ActionType<ActionTypeEnum.sampleSuccess, ISampleResDTO> =
+export const sampleActionSuccess: ActionType<ActionTypeEnum.sampleSuccess, ISampleResDTO['data']> =
 	payload => ({
 		type: ActionTypeEnum.sampleSuccess,
 		payload,

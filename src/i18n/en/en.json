@@ -1,3 +1,5 @@
 {
-	"sample.paragraph": "test text"
+	"sample.paragraph": "This is just a code architecture for example",
+	"sample.loading": "Loading...",
+	"sample.delay": "delay for get response with saga method"
 }

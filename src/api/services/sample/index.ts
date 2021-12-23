@@ -1,5 +1,6 @@
 import { axiosInstance } from 'api';
 import { AxiosRequestConfig } from 'axios';
+import { ISampleResDTO } from 'types/DTO/Sample';
 
 enum EUserPaths {
 	baseURL = 'https://jsonplaceholder.typicode.com/users',
@@ -7,7 +8,7 @@ enum EUserPaths {
 
 const api = {
 	getSampleList(params = {}, option: AxiosRequestConfig = {}) {
-		return axiosInstance.get<any>(EUserPaths.baseURL, { ...option, params });
+		return axiosInstance.get<ISampleResDTO['data']>(EUserPaths.baseURL, { ...option, params });
 	},
 };
 
